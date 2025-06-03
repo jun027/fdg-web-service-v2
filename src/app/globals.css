@@ -1,0 +1,168 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-dark: #000000;
+  --color-white: #ffffff;
+
+  --color-primary-main: #5d4037;
+  --color-secondary-notion: #ce9a34;
+  --color-secondary-mark: #ff8800;
+
+  --color-dark-900: #212529;
+  --color-dark-800: #343a40;
+  --color-dark-700: #495057;
+  --color-dark-600: #6c757d;
+  --color-dark-500: #adb5bd;
+  --color-dark-400: #ced4da;
+  --color-dark-300: #dee2e6;
+  --color-dark-200: #e9ecef;
+  --color-dark-100: #f8f9fa;
+
+  --color-netural-900: #212529;
+  --color-netural-800: #343a40;
+  --color-netural-700: #495057;
+  --color-netural-600: #6c757d;
+  --color-netural-500: #adb5bd;
+  --color-netural-400: #ced4da;
+  --color-netural-300: #dee2e6;
+  --color-netural-200: #e9ecef;
+  --color-netural-100: #f8f9fa;
+
+  --color-red-red: #e80000;
+}
+
+@layer base {
+  .backdrop-blur-md {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+}
+
+@layer components {
+  .rhf-block {
+    @apply flex flex-col gap-2;
+  }
+}
+
+@layer utilities {
+}
+
+@utility mobile-jf-h1 {
+  @apply text-[24px] font-['openhuninn'] leading-normal tracking-normal;
+}
+
+@utility mobile-jf-h2 {
+  @apply text-[22px] font-['openhuninn'] leading-normal tracking-normal;
+}
+
+@utility mobile-jf-h3 {
+  @apply text-[20px] font-['openhuninn'] leading-normal tracking-normal;
+}
+
+@utility mobile-jf-h4 {
+  @apply text-[16px] font-['openhuninn'] leading-normal tracking-[1.6px];
+}
+
+@utility mobile-jf-h5 {
+  @apply text-[14px] font-['openhuninn'] leading-[130%] tracking-[1.4px];
+}
+
+@utility mobile-fz-h1 {
+  @apply text-[44px] font-['fzshujf'] leading-normal tracking-normal;
+}
+
+@utility mobile-fz-h2 {
+  @apply text-[32px] font-['fzshujf'] leading-normal tracking-normal;
+}
+
+@utility mobile-fz-h3 {
+  @apply text-[24px] font-['fzshujf'] leading-normal tracking-normal;
+}
+
+@utility mobile-fz-h4 {
+  @apply text-[20px] font-['fzshujf'] leading-[130%] tracking-[0.6px];
+}
+
+@utility desktop-jf-number {
+  @apply text-[40px] font-['openhuninn'] leading-normal tracking-normal;
+}
+
+@utility desktop-jf-h1 {
+  @apply text-[24px] font-['openhuninn'] leading-10 tracking-[3.6px];
+}
+
+@utility desktop-jf-h2 {
+  @apply text-[20px] font-['openhuninn'] leading-normal tracking-normal;
+}
+
+@utility desktop-jf-h3 {
+  @apply text-[16px] font-['openhuninn'] leading-[130%] tracking-normal;
+}
+
+@utility desktop-jf-h4 {
+  @apply text-[14px] font-['openhuninn'] leading-normal tracking-normal;
+}
+
+@utility desktop-fz-h1 {
+  @apply text-[60px] font-['fzshujf'] leading-normal tracking-[3px];
+}
+
+@utility desktop-fz-h2 {
+  @apply text-[30px] font-['fzshujf'] leading-normal tracking-normal;
+}
+
+@utility desktop-fz-h3 {
+  @apply text-[24px] font-['fzshujf'] leading-10 tracking-[3.6px];
+}
+
+@utility desktop-fz-p {
+  @apply text-[30px] font-['fzshujf'] leading-normal tracking-[1.5px];
+}
+
+.main-background {
+  @apply bg-[url('/images/bg-repeat-01.png')] bg-repeat;
+}
+
+.secondary-background {
+  @apply bg-[url('/images/bg-repeat-02.png')] bg-repeat;
+}
+
+.pos-center {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+.wrapper {
+  @apply px-4;
+}
+
+.primary-button {
+  @apply rounded-[8px] bg-primary-main py-3 w-full cursor-pointer hover:opacity-75 transition-opacity duration-300;
+}
+
+.secondary-button {
+  @apply rounded-[8px] border border-primary-main py-2 w-full cursor-pointer hover:opacity-50 transition-opacity duration-300;
+}
+
+.image {
+  @apply absolute top-0 left-0 w-full h-full object-cover;
+}
+
+.rhf-text-field {
+  @apply w-full rounded-[8px] border border-primary-main bg-white py-3 px-4 focus:outline-none placeholder:text-dark-500;
+}
+
+.writing-vertical-rl {
+  writing-mode: vertical-rl;
+}
+
+@font-face {
+  font-family: 'openhuninn';
+  src: url('/fonts/jf-openhuninn-2.1.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'fzshujf';
+  src: url('/fonts/FZZhaoMengFuXingShuJF.woff') format('woff');
+  font-display: swap;
+}

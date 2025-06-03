@@ -1,0 +1,5 @@
+export { default as NewsBlocks } from './news-blocks'
+export { default as NewsCard } from './news-card'
+export { default as NewsCarousel } from './news-carousel'
+export { default as NewsContainer } from './news-container'
+export { default as NewsView } from './news-view'

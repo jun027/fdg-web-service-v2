@@ -1,0 +1,43 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "css.lint.unknownAtRules": "ignore",
+  "i18n-ally.localesPaths": ["src/locales", "src/locales/langs"],
+  "cSpell.words": [
+    "bradgarropy",
+    "clsx",
+    "countrytown",
+    "fontawesome",
+    "fortawesome",
+    "fundraise",
+    "fzshujf",
+    "gsap",
+    "Guangming",
+    "heroicons",
+    "hookform",
+    "immer",
+    "itemtype",
+    "Jiao",
+    "meritinfo",
+    "netural",
+    "newstype",
+    "noto",
+    "openhuninn",
+    "payform",
+    "paytype",
+    "pulian",
+    "qrcode",
+    "QWERTYUIPASDFGHJKLZXCVBNM",
+    "receipttype",
+    "resetmail",
+    "selectlist",
+    "shen",
+    "Signup",
+    "Swiper",
+    "uuidv4",
+    "zustand"
+  ]
+}
