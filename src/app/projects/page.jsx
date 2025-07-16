@@ -7,7 +7,13 @@ import {
 import { ProjectsView } from '@/sections/projects'
 
 async function ProjectsPage() {
-  const projects = await getProjects()
+  const result = await getProjects()
+
+  const projects = Array.isArray(result?.data) ? result.data : []
+
+  if (projects.length === 0) {
+    console.error('getProjects() 回傳錯誤，原始值：', result)
+  }
 
   const allChildProjects = PROJECTS.reduce((accumulator, project) => {
     project.fundraise_plan_list.forEach(plan => {

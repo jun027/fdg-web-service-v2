@@ -8,7 +8,14 @@ import MainLayout from '@/layouts/main'
 import { HomeView } from '@/sections/home'
 
 export default async function Home() {
-  const projects = await getProjects()
+  const rawProjects = await getProjects()
+
+  // 檢查是否成功拿到 array，否則設空陣列
+  const projects = Array.isArray(rawProjects)
+    ? rawProjects
+    : rawProjects?.data && Array.isArray(rawProjects.data)
+      ? rawProjects.data
+      : []
 
   const allChildProjects = PROJECTS.reduce((accumulator, project) => {
     project.fundraise_plan_list.forEach(plan => {
@@ -18,10 +25,12 @@ export default async function Home() {
   }, [])
 
   const formattedProjects = projects.map(project => {
-    const fundraisePlanList = project.fundraise_plan_list.map(plan => {
-      const planData = allChildProjects.find(p => p.id === plan.id)
-      return { ...plan, ...planData }
-    })
+    const fundraisePlanList = Array.isArray(project.fundraise_plan_list)
+      ? project.fundraise_plan_list.map(plan => {
+          const planData = allChildProjects.find(p => p.id === plan.id)
+          return { ...plan, ...planData }
+        })
+      : []
 
     return {
       ...project,

@@ -37,7 +37,7 @@ export default function HeaderDrawer() {
           />
 
           <div className="absolute top-[64px] right-[-30px] w-[568px] space-y-7 z-50 ">
-            <div className="flex items-center gap-3 text-white text-2xl font-bold">
+            <div className="flex items-center gap-3 text-white text-2xl font-bold lg:pl-44">
               <BsPersonFill size={24} />
               {/* <span className="desktop-fz-p">會員登入</span> */}
               <UserStatus />

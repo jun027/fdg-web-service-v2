@@ -8,7 +8,7 @@ export default function HeaderDrawerMenuList() {
   const setOpen = useMobileMenuContext(state => state.setOpen)
 
   return (
-    <div className="text-white space-y-7 px-6">
+    <div className="text-white space-y-7 px-6 lg:pl-60 xl:pl-0">
       {FOOTER_LIST.map(section => (
         <div key={section.id}>
           <div className="relative inline-block">
