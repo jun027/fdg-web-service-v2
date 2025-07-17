@@ -2,7 +2,12 @@
 const nextConfig = {
   output: 'standalone',
   images: {
-    unoptimized: false,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'dummyimage.com',
+      },
+    ],
   },
 }
 
